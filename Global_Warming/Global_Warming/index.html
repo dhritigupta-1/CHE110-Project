@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Style Libraries & Files-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/dc.min.css" type="text/css" />
+
+    <!-- Script Libraries & Files-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
+
+    <script src="./js/graphs1.js"></script>
+    <script src="./js/graph2.js"></script>
+    <script src="./js/graph3.js"></script>
+    <script src="./js/graph4.js"></script>
+    <script src="./js/otherJS.js"></script>
+
+
+    <title>Global Warming</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-navbar">
+            <a class="navbar-brand" href=""><img src="https://i.ibb.co/vqzvfY7/globe.png" width="30" height="30" class="d-inline-block align-top" alt=""> Global Warming</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home_page">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#first_page">Temperature Fluctuations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#second_page">Emissions per Capita</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                  </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#third_page">Emissions from Fossil Fuel</a>
+                            <a class="dropdown-item" href="#forth_page">Cumulative CO₂ emissions</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <section id="home_page">
+
+        <div class="container_fluid">
+            <div class="bck-ground">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="container jumbotron jumbotron-home-page">
+                            <h1 class="first_h1">What is global warming?</h1>
+                            <p class="text-first-page"><i><b>Global warming</b></i> is the current increase in temperature of the Earth's surface (both land and water) as well as it's atmosphere. Average temperatures around the world have risen by 0.75°C (1.4°F) over the last 100
+                                years about two thirds of this increase has occurred since 1975. In the past, when the Earth experienced increases in temperature it was the result of natural causes but today it is being caused by the accumulation of greenhouse
+                                gases in the atmosphere produced by human activities. The natural greenhouse effect maintains the Earth's temperature at a safe level making it possible for humans and many other lifeforms to exist. However, since the Industrial
+                                Revolution human activities have significantly enhanced the greenhouse effect causing the Earth's average temperature to rise by almost 1°C. <span id="dots">...</span><span id="more">This is creating the global warming
+                                we see today. To put this increase in perspective it is important to understand that during the last ice age, a period of massive climate change, the average temperature change around the globe was only about 5°C. A long
+                                series of scientific research and international studies has shown, with more than 90% certainty, that this increase in overall temperatures is due to the greenhouse gases produced by humans. Activities such as deforestation
+                                and the burning of fossil fuels are the main sources of these emissions. These findings are recognized by the national science academies of all the major industrialized countries. Global warming is affecting many places
+                                around the world. It is accelerating the melting of ice sheets, permafrost and glaciers which is causing average sea levels to rise. It is also changing precipitation and weather patterns in many different places, making
+                                some places dryer, with more intense periods of drought and at the same time making other places wetter, with stronger storms and increased flooding. These changes have affected both nature as well as human society and
+                                will continue to have increasingly worse effects if greenhouse gas emissions continue to grow at the same pace as today. <br /> <a href="https://bit.ly/32B6EBK" target="blank">https://bit.ly/32B6EBK</a></span>
+                            </p>
+                            <button onclick="readMore()" id="myBtn" class="btn btn-success btn-sm">expand</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-6 ">
+
+                        <div class="container jumbotron ">
+
+                            <h2 class="first_h2 ">What causes global warming?</h2>
+
+                            <p class="text-first-page">The cause of global warming is the increasing quantity of greenhouse gases in the our atmosphere produced by human activities, like the burning of fossil fuels or deforestation. These activities produce large amounts of greenhouse
+                                gas emissions which is causing global warming. Greenhouse gases trap heat in the Earth's atmosphere to keep the planet warm enough to sustain life, this process is called the greenhouse effect. It is a natural process and
+                                without these gases, the Earth would be too cold for humans, plants and other creatures to live. The natural greenhouse effect exists due to the balance of the major types of greenhouse gases. However, when abnormally high
+                                levels of these gases accumulate in the air, more heat starts getting trapped and leads to the enhancement of the greenhouse effect. Human-caused emissions have been increasing greenhouse levels which is raising worldwide
+                                temperatures and driving global warming. <a href="https://bit.ly/2VTKOqG" target="blank">https://bit.ly/2VTKOqG</a>
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 ">
+
+                        <div class="container jumbotron ">
+
+                            <h2 class="first_h2 ">What are the effects of global warming?</h2>
+
+                            <p class="text-first-page"> Global warming is damaging the Earth's climate as well as the physical environment. One of the most visible effects of global warming can be seen in the Arctic as glaciers, permafrost and sea ice are melting rapidly. Global
+                                warming is harming the environment in several ways including:
+                                <ul class="text-first-page">
+                                    <li>Desertification</li>
+                                    <li>Increased melting of snow and ice</li>
+                                    <li>Sea level rise</li>
+                                    <li>Stronger hurricanes and cyclones</li>
+                                    <a href="https://bit.ly/2N0Y358" target="blank">https://bit.ly/2N0Y358</a>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- First Page that contains more data */ -->
+
+    <section id="first_page">
+
+        <div class="container page">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="rest_h2">Global Warming changes over the time</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p> Here we will be talking about the changes of the temperature over the past 200 years and visualize this for you, so you can see how heavily the enviornment has changed</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-sm-4" id="monthly_chart"></div>
+            </div>
+            <div class="row ">
+                <div class="col-sm-6">
+                    <p class="text_after_graph"> The graph above illustrates the change in global surface temperature since 1880. The last decade has showed the highest temperatures changes since 200 years! </br> The picture next to the text is just for ilustration purposes and show
+                        case the horrific consequences of ignoring global warming. For more see the following Link.
+                        <a href="https://bit.ly/2PnAruh" target="blank">https://bit.ly/2PnAruh</a>
+                    </p>
+                </div>
+                <div class="col-md-6 text_pics">
+                    <img src="https://i.ibb.co/t4Ym1Qt/woodfire.jpg" alt="wood fire" class="img-fluid img-thumbnail">
+                </div>
+            </div>
+    </section>
+
+    <!-- Second Page that contains more data */ -->
+
+    <Section id="second_page">
+        <div class="container page">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="rest_h2">Global Emissions per Capita since 1950</h2>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-12 col-md-6 col-sm-4" id="emissions_chart"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="text_after_graph"> Carbon emissions per capita are measured as the total amount of carbon dioxide emitted by the country as a consequence of all relevant human (production and consumption) activities, divided by the population of the country.</p>
+                    <p class=""><b>The greenhouse gases that humans do emit directly in significant quantities are:</b> </br>
+                        <ul>
+                            <li>Carbon dioxide (CO2). Accounts for around three-quarters of the warming impact of current human greenhouse-gas emissions.</li>
+                            <li>Methane (CH4).</li>
+                            <li>Nitrous oxide (N2O).</li>
+                            <li>Fluorinated gases ("F gases").</li>
+                        </ul>
+
+                        <a href="https://bit.ly/31ITsJU" target="blank">https://bit.ly/31ITsJU</a>
+                    </p>
+                </div>
+                <div class="col-md-6 text_pics">
+                    <img src="https://i.ibb.co/yF1JSDF/emissions-per-capita.jpg" alt="globe_temperature_change" class="img-fluid img-thumbnail">
+                </div>
+            </div>
+    </Section>
+
+
+    <!-- Third Page that contains more data */ -->
+
+    <section id="third_page">
+
+        <div class="container page">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="rest_h2">Carbon Emissions from Fossil Fuel since 1990</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-sm-4" id="total_emission_per_fossilfuel">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="text_after_graph"> Emissions measurement is the process of measuring the amount of pollutants, in a gaseous or particulate form, being emitted to the air from a specific source, such as an industrial process. Measurements of emissions can be used to
+                        understand the relative importance of a given source compared to other sources and in developing emissions inventories. <br/>Government or industry personnel use emissions measurements to assess the performance of control strategies.
+                        The gas stream can be measured before and after a pollution control device to determine how efficiently it captures pollutants. Emission measurements also are used to determine compliance with regulations limiting the amount of
+                        pollution that a source may emit. Measurements can be taken over a short time period (e.g., hours), often referred to as a source test, or with methods that measure on a continuous basis, often called continuous emissions monitoring.
+                        Either way, it is important obtain data from samples that are representative of the emission stream using methods that are reliable.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Forth Page that contains more data */ -->
+
+
+    <section id="forth_page">
+
+        <div class="container page">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="rest_h2">Cumulative CO₂ emissions of the 9 worst countries since 1900</h2>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-12 col-md-6 col-sm-3" id="cumulative_carbon_emissions">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>These countries produce the most CO2 emissions</h3>
+                    <p class="text_after_graph"> Despite long-standing warnings of a climate emergency as well as efforts by some nations to reduce carbon dioxide emissions, the worldwide use of fossil fuels – and with it global greenhouse gas emissions – grew last year. A number
+                        of potential disaster scenarios caused by climate change remain well documented. And yet, increasing demand for coal, oil, and natural gas drove the increase in GHG emissions, according to the International Energy Agency.</p>
+                </div>
+
+            </div>
+    </section>
+
+
+
+    <!-- Return to the top button-->
+
+    <div class="container page">
+        <div class="row ">
+            <div class="col-sm-12">
+                <a href="#home_page" class="btn btn-outline-dark btn-lg" role="button" aria-pressed="true">back to the top</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Footer part of the page -->
+
+    <footer>
+        <div class="container_fluid footer">
+            <div class="row">
+                <div class="col-sm-4">
+                    This website was created by Rami Fareed for learning purposes and as a project for the school "code institute" and it show case the global warming issues.
+                </div>
+                <div class="col-sm-4">
+                    <a href="https://github.com/RamiFareed1989 " target="blank">
+                        <i class="fab fa-github-square fa-3x"></i>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript for Navbar -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+
+</body>
+
+</html>
